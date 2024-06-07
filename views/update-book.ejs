@@ -1,0 +1,33 @@
+<%- include("partials/header.ejs") %>
+<form action="/update-book/<%=book._id%>" method="post">
+<div class="w-[w-full] h-[520px]  flex my-4 mx-10">
+    <div class="w-[40%] h-[100%]">
+        <img class=""
+        src="<%=book.Poster%>" 
+        alt="">
+    </div>
+    <div class="w-[60%] h-[100%] flex flex-col justify-evenly gap-4 px-10">
+        <h1 class="font-bold text-2xl">Book Details</h1>
+        <input value="<%=book.Poster%>" class="py-3.5 px-6 placeholder: placeholder:text-black rounded-md border border-blue-400"
+        type="text" placeholder="Book Poster" name="Poster">
+        <input value="<%=book.Name%>" class="py-3.5 px-6 placeholder: placeholder:text-black rounded-md border border-blue-400"
+         type="text" placeholder="Book Name" name="Name">
+        <input value="<%=book.Author%>" class="py-3.5 px-6 placeholder: placeholder:text-black rounded-md border border-blue-400 "
+        type="text" placeholder="Author Name" name="Author">
+        <input value="<%=book.Iabn%>" class="py-3.5 px-6 placeholder: placeholder:text-black rounded-md border border-blue-400 "
+        type="text" placeholder="ISBN Number" name="Isbn">
+        <input value="<%=book.Price%>" class="py-3.5 px-6 placeholder: placeholder:text-black rounded-md border border-blue-400 "
+        type="number" placeholder="Book Price" name="Price">
+        <textarea value="<%=book.description%>" name="description" class="h-[300px] p-2 text-md :p-1   placeholder:text-black border border-blue-400"
+        placeholder="Enter description here..."></textarea>
+       
+        
+        <h1>
+            <button class="py-3 px-5 bg-blue-400 rounded-md text-white">Update Book</button>
+        </h1>
+  
+    </div>
+</div>
+</form>
+
+<%- include("partials/footer") %>

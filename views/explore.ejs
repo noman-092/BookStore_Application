@@ -1,0 +1,54 @@
+<%- include("partials/header.ejs") %>
+
+<!-- <div class="w-[w-full] h-[520px] flex my-4 mx-10">
+    <div class="w-[40%] h-[100%] bg-black">
+        <img class=""
+        src="https://plus.unsplash.com/premium_photo-1681825268400-c561bd47d586?q=80&w=2072&auto=
+        format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+        alt="">
+    </div>
+    <div class="w-[60%] h-[100%] bg-white-100 flex flex-col justify-evenly gap-4 px-10">
+        
+        <h1 class="font-bold text-2xl">Book Details</h1>
+        <h3 class="text-xl">Book Title</h3>
+        <small class="text-sm">By author name</small>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore alias,
+            adipisci, quasi hic id neque aliquid Lorem ipsum dolor sit, amet consectetur
+            adipisicing elit. Officiis, minima. Lorem ipsum dolor sit amet.
+            perspiciatis tempora incidunt dicta quae minus quas perferendis ipsam!
+            Recusandae aperiam eius voluptatem in!</p>
+        <h6>ISBN NUMBER</h6>
+        <h1 class="text-red-500 text-lg">Price $100</h1>
+        <li class="flex gap-10">
+            <a class="py-3 px-10 bg-blue-400 rounded-md text-white"
+            href="/update-book">Update Book</a>
+            <a  class="py-3 px-10 bg-red-400 rounded-md text-white"
+            href="">Delete Book</a>
+        </li>
+    </div>
+</div> -->
+
+<div class="w-[w-full] h-[520px] flex my-4 mx-10">
+    <div class="w-[40%] h-[100%] bg-black">
+        <img class=""
+        src="<%=book.Poster%>" 
+        alt="">
+    </div>
+    <div class="w-[60%] h-[100%] bg-white-100 flex flex-col justify-evenly gap-4 px-10">
+        
+        <h1 class="font-bold text-2xl">Book Details</h1>
+        <h3 class="text-xl"><%=book.Name%></h3>
+        <small class="text-sm"><%= book.Author %></small>
+        <p><%= book.description%></p>
+        <h6>ISBN No:- "<%=book.Isbn %>"</h6>
+        <h1 class="text-red-500 text-lg">Price $<%=book.Price %></h1>
+        <li class="flex gap-10">
+            <a class="py-3 px-10 bg-blue-400 rounded-md text-white"
+            href="/update-book/<%=book._id%>">Update Book</a>
+            <a  class="py-3 px-10 bg-red-400 rounded-md text-white"
+            href="/delete-book/<%=book._id%>">Delete Book</a>
+        </li>
+    </div>
+</div>
+
+<%- include("partials/footer") %>
