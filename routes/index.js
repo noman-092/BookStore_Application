@@ -2,7 +2,6 @@ var express = require('express');
 var router = express.Router();
 const  bookSchema= require("../models/bookModel");
 const bookCollection = require('../models/bookModel');
-require("dotenv").config({path: "./.env"});
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
